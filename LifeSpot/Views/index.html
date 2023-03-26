@@ -40,7 +40,11 @@
         <p>
             <b>Поле поиска:</b><br>
             <!--<input class="SearchInput" type="text" size="40">-->
-            <input type="text" oninput=" /* Вот тут будет располагаться наш Javascript - код */ alert('было что-то введенно!')" size=50%>
+            <input type="text" oninput=" /* Вот тут будет располагаться наш Javascript - код */
+                    let elements = document.getElementsByTagName('input');
+                    let element = elements[0];
+                    let text = element.value;
+                    alert(text)" size=50%>
         </p>
 
         <!--<button><a href=" https://www.youtube.com/watch?v=e3IGUhlmXMs">Санкт- Петербург</a></button>
