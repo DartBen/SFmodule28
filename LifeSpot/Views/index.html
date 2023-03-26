@@ -9,14 +9,14 @@
         let a = b * 3.0;
         alert(a);
     </script>-->
-    <script>
+    <!--<script>
         age = prompt("Введите свой возраст.", "");
         if (age >= 18) { alert("Приветствуем на LifeSpot! " + new Date().toLocaleString()); }
         else {
             alert("Данный сайт не предназначен для лиц младше 18 лет!");
             window.location.href = "http://www.google.com";
         };
-    </script>
+    </script>-->
     <script src="../Static/JS/index.js"></script>
 </head>
 <body>
@@ -41,19 +41,24 @@
             <b>Поле поиска:</b><br>
             <input type="text" oninput="
                    let elements=document.getElementsByTagName('input');
-                   let element=elements[0]; let text=element.value;
+                   let element=elements[0];
+                   let text=element.value;
                    let videoElements=document.getElementsByClassName('video-container');
                    for (let i=0; i < videoElements.length; i++) {
-            let videoElement = videoElements[i];
-            let videoElementName = videoElement.getElementsByTagName('h3')[0];
-            console.log(videoElementName); }
-
+                        let videoElement = videoElements[i];
+                        let videoElementName = videoElement.getElementsByTagName('h3')[0].innerText;
+                        if (!videoElementNameLowerCase.includes(text.toLowerCase())){
+                               videoElements[i].style.display = 'none';
+                           } else {
+                               videoElements[i].style.display = 'inline-block';
+                           }
+                   }
             " size=50%>
         </p>
 
         <div class="video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/e3IGUhlmXMs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <h3>Санкт- Петербург</h3>
+            <h3>Санкт-Петербург</h3>
         </div>
         <div class="video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/srlpC5tmhYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
