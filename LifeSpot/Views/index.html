@@ -9,14 +9,6 @@
         let a = b * 3.0;
         alert(a);
     </script>-->
-    <script>
-        age = prompt("Введите свой возраст.", "");
-        if (age >= 18) { alert("Приветствуем на LifeSpot! " + new Date().toLocaleString()); }
-        else {
-            alert("Данный сайт не предназначен для лиц младше 18 лет!");
-            window.location.href = "http://www.google.com";
-        };
-    </script>
     <script src="../Static/JS/index.js"></script>
 </head>
 <body>
@@ -47,6 +39,7 @@
                    for (let i=0; i < videoElements.length; i++) {
                         let videoElement = videoElements[i];
                         let videoElementName = videoElement.getElementsByTagName('h3')[0].innerText;
+                        let videoElementNameLowerCase = videoElementName.toLowerCase();
                         if (!videoElementNameLowerCase.includes(text.toLowerCase())){
                                videoElements[i].style.display = 'none';
                            } else {
