@@ -39,7 +39,9 @@
         <!--Параграф-->
         <p>
             <b>Поле поиска:</b><br>
-            <input type="text" oninput=" let elements = document.getElementsByTagName('input');let element = elements[0]; let text = element.value; let VideoElements=document.getElementsByClassName('video-container'); for (let i=0; i <= VideoElements.length; i++){ console.log(VideoElements[i]) } " size=50%>
+            <input type="text" oninput=" let elements = document.getElementsByTagName('input'); let element = elements[0]; let text = element.value; let videoElements = document.getElementsByClassName('video-container'); for (let i = 0; i < videoElements.length; i++) { let videoElement = videoElements[i]; let videoElementName = videoElement.getElementsByTagName('h3')[0]; console.log(videoElementName); } 
+
+            " size=50%>
         </p>
 
         <div class="video-container">
